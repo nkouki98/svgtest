@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {text-align: center;}
+
+@keyframes rotatewheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#Vector_52, #Vector_53, #Vector_54, #vector_55 {
+    animation: rotatewheel 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translate(200px, 50px); /* Adjust the distance to move */
+        opacity: 0;
+      }
+  }
+
+  #Vector_49, #Vector_50, #Vector_51 {
+    animation: moveRight 0.4s linear infinite; /* Adjust the duration as needed */
+
+  }
+
+@keyframes wiggleBranches {
+    0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(2px); /* Adjust the distance as needed */
+      }
+      75%
+      {
+        transform: translateY(-2px); /* Adjust the distance as needed */
+      }
+      
+  }
+
+
+  @keyframes moveTrees {
+    0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(2px) rotate(6deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+  }
+  
+  #branches {
+    transform-origin: center;
+    transform-box: fill-box;
+    position: absolute;
+    animation: moveTrees 2s infinite linear;
+  }
+  #treesMotion {
+    transform-origin: center;
+    transform-box: fill-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: wiggleBranches 2s infinite;/* Adjust the duration as needed */
+  }
+  
+
+
+
+@keyframes moveAndScaleCircle {
+    
+     100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+ 
+  }
+  
+  #Sun {
+    transform-origin: center;
+    transform-box: fill-box;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    animation: moveAndScaleCircle 4s infinite; /* Adjust the duration as needed */
+  }
+  
