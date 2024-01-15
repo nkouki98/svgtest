@@ -1,2 +1,2 @@
 # svgtest
- svg animation using FIgma/css
+ svg animation using Figma/css
